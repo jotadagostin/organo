@@ -23,7 +23,7 @@ function App() {
     {
       nome: "Devops",
       corPrimaria: "#e06b69",
-      corSecundaria: "fde7e8",
+      corSecundaria: "#fde7e8",
     },
     {
       nome: "UX e Design",
@@ -57,9 +57,10 @@ function App() {
           aoNovoColaboradorAdicionado(colaborador)
         }
       />
-      <Time nome="Programacao" />
-      <Time nome="FrontEnd" />
-      <Time nome="Data Science" />
+
+      {times.map((time) => (
+        <Time key={time.nome} nome={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria}/>
+      ))}
     </div>
   );
 }
