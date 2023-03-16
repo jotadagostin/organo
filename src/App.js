@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
-import Formulario from './componentes/Formulario';
-import Time from './componentes/Time';
+import Collaborator from './componentes/Collaborator';
+import Form from './componentes/Form';
+import Team from './componentes/Team';
 
 function App() {
 
-  const times = [
+  const Team = [
     {
       nome: 'Programação',
       corPrimaria: '#57C278',
@@ -43,11 +44,11 @@ function App() {
     }
   ]
 
-  const [colaboradores, setColaboradores] = useState([])
+  const [collaborators, setCollaborators = useState([]);
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
+  const aoNovoColaboradorAdicionado = (collaborator) => {
     debugger
-    setColaboradores([...colaboradores, colaborador])
+    setCollaborators([...collaborators, Collaborator])
   }
 
   return (
