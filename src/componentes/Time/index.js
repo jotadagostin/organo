@@ -1,7 +1,7 @@
 import Colaborador from "../Colaborador";
 import "./Time.css";
 
-const Time = (props) => {
+const Time = (time, colaboradores, aoDeletar) => {
   const css = { backgroundColor: props.corSecundaria };
 
   return props.colaboradores.length > 0 ? (
@@ -9,8 +9,8 @@ const Time = (props) => {
       <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
       <div className="colaboradores">
         {props.colaboradores.map((colaborador) => {
-            console.log(<Colaborador corDeFundo={props.corPrimaria} key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem}/>);
-            return <Colaborador corDeFundo={props.corPrimaria} key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem}/>
+            
+            return <Colaborador corDeFundo={props.corPrimaria} key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem} aoDeletar={() => {aoDeletar}}/>
         })}
       </div>
     </section>
