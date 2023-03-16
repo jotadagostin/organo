@@ -1,10 +1,10 @@
-import './DropdownList.css'
+import './ListaSuspensa.css'
 
-const DropdownList = (props) => {
+const ListaSuspensa = (props) => {
     return (
-        <div className='dropdown-list'>
+        <div className='lista-suspensa'>
             <label>{props.label}</label>
-            <select onChange={event => props.whenChanged(event.target.value)} required={props.required} value={props.valor}>
+            <select onChange={evento => props.aoAlterado(evento.target.value)} required={props.required} value={props.valor}>
                 <option value=""></option>
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
@@ -14,4 +14,4 @@ const DropdownList = (props) => {
     )
 }
 
-export default DropdownList
+export default ListaSuspensa
