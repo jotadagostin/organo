@@ -1,10 +1,11 @@
 import "./colaborador.css";
 import { AiFillCloseCircle } from "react-icons/ai";
+// para importar o icon depois de instalar a biblioteca
 
 const Colaborador = ({ colaborador, corDeFundo, aoDeletar }) => {
   return (
     <div className="colaborador">
-      <AiFillCloseCircle size={25} className="deletar" onClick={aoDeletar} />
+      <AiFillCloseCircle size={30} className="deletar" onClick={aoDeletar} />
       <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
         <img src={colaborador.imagem} alt={colaborador.nome} />
       </div>
