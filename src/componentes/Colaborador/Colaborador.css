@@ -40,5 +40,6 @@
 .deletar {
     position: absolute;
     right: -10px;
-    top: -10px;
+    top: -10px; 
+    /* para a posicao ficar um pouco fora do componente */
 }
