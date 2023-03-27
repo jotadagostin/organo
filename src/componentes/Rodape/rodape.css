@@ -16,13 +16,20 @@
     margin-right: 0;
 }
 
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 414px) {
     .footer {
-       width: 50%;
+        display:block;
+        align-items: center;
+        text-align: center;
     }
 
     .footer ul li {
-       
+        padding-bottom: 15px;
+
+    }
+
+    p {
+        padding-top: 20px;
     }
     
 }
